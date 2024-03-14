@@ -15,7 +15,7 @@ const PrincipalBanner: React.FC = () => {
         <div className={styles["principal-banner"]}>
             <div className={styles["principal-banner-content"]}>
                 <div className={styles.menu}>
-                    <img src="Truemed_Logo_Full_White.png" alt="Truemed logo"/>
+                    <img src="/Truemed_Logo_Full_White.png" alt="Truemed logo"/>
                     <div className={styles["options"]}>
                         <Link href='/'><p>Home</p></Link>
                         <Link href='/shop'><p>About</p></Link>

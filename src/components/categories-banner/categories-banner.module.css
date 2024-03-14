@@ -30,32 +30,11 @@
     font-size: 20px;
   }
   
-  /* .categories-banner-text h1 {
-    font-size: 56px;
-    margin: 0;
-    line-height: 70px;
-  } */
-  
   .categories-banner-text p {
     line-height: 35px;
     margin: 6px;
   }
   
-  /* .categories-banner-text button {
-    border: none;
-    background-color: rgb(23, 152, 149);
-    color: white;
-    height: 54px;
-    width: 180px;
-    font-size: 20px;
-    border-radius: 8px;
-  } */
-  
-  /* .categories-banner-text button:hover {
-    background-color: rgb(8, 104, 102);
-    cursor: pointer;
-  } */
-
   .greeny-text {
     font-weight: 700;
     color: rgb(103, 155, 154);

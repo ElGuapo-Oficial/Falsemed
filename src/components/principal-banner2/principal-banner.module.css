@@ -1,0 +1,41 @@
+  .principal-banner {
+    height: 750px;
+    width: calc(100% - 40px);
+    max-width: 1670px;
+    background-color: rgb(1, 65, 73);
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    margin: 10px auto 0;
+
+    /* background-image: url('https://prod-public-truemed.s3.amazonaws.com/mlp/c/banners/fitness/8a488169-3d4f-4d29-aa70-75e777b77e1e.webp'); */
+    background-size: cover;   /* Ensure the image covers the entire element */
+    background-position: center; /* Center the background image */
+    width: 100%; /* or a specific width */
+    /* height: 400px;  */
+  }
+  
+  .principal-banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+
+  .principal-banner-children {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 890px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+
+    .principal-banner-children {
+      max-width: none;
+    }
+  }
