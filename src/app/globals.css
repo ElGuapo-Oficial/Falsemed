@@ -100,6 +100,15 @@ a {
   text-decoration: none;
 }
 
+.greeny-text {
+  font-weight: 700;
+  color: rgb(103, 155, 154);
+  font-size: 13px;
+  text-transform: uppercase;
+  line-height: 21px;
+  letter-spacing: 1px;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

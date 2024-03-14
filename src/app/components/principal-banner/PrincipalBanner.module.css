@@ -15,8 +15,8 @@
     align-items: center;
     height: 100%;
   }
-  
-  .principal-banner-menu {
+
+  .menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -24,35 +24,63 @@
     width: 100%;
     max-width: 1300px;
   }
+
+  .menu .options {
+    position: relative;
+    display: flex;
+    font-size: 19px;
+  }
+
+  .menu button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 19px;
+    color: white;
+  }
+
+  .menu .shop-menu {
+    position: absolute;
+    top: 50px;
+    left: 190px;
+    height: 100px;
+    width: 200px;
+    background-color: white;
+    border-radius: 5px;
+  }
+
+  .menu a {
+    text-decoration: none;
+  }
+
+  .menu a:visited {
+    color: white
+  }
+
+  .menu a p, .menu button {
+    padding: 8px;
+    margin: 0 10px;
+    border-radius: 5px;
+  }
+
+  .menu a p:hover, .menu button:hover {
+    background-color: rgba(2, 102, 115, 0.5);
+    cursor: pointer;
+  }
   
-  .principal-banner-menu img {
+  .menu img {
     height: 100%;
     width: auto;
   }
   
-  .principal-banner-menu hr {
+  .menu hr {
     width: 1px; 
     height: 20px;
     display: inline-block;
     margin: 10px 15px;
     border: none; 
     background-color: white;
-  }
-  
-  .menu-options {
-    display: flex;
-    font-size: 19px;
-  }
-  
-  .menu-options div {
-    padding: 8px;
-    margin: 0 10px;
-    border-radius: 5px;
-  }
-  
-  .menu-options div:hover {
-    background-color: rgba(2, 102, 115, 0.5);
-    cursor: pointer;
   }
   
   .principal-banner-text {
@@ -91,6 +119,15 @@
     background-color: rgb(8, 104, 102);
     cursor: pointer;
   }
+
+  .greeny-text {
+    font-weight: 700;
+    color: rgb(103, 155, 154);
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 21px;
+    letter-spacing: 1px;
+  }
   
   @media (max-width: 768px) {
 
@@ -111,5 +148,4 @@
     .menu-options{
       display: none;
     }
-
   }

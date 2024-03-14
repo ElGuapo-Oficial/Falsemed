@@ -1,17 +1,31 @@
-import styles from "./PrincipalBanner.module.css";
+'use client'
 
-const PrincipalBanner = () => {
+import { useState } from 'react';
+import styles from "./PrincipalBanner.module.css";
+import Link from "next/link";
+
+const PrincipalBanner: React.FC = () => {
+    const [showShopMenu, setShoShopMenu] =  useState<boolean>(false);
+
+    const onShowShopMenu = () => {
+        setShoShopMenu(showShopMenu => !showShopMenu)
+    }
+
     return (
         <div className={styles["principal-banner"]}>
             <div className={styles["principal-banner-content"]}>
-                <div className={styles["principal-banner-menu"]}>
+                <div className={styles.menu}>
                     <img src="Truemed_Logo_Full_White.png" alt="Truemed logo"/>
-                    <div className={styles["menu-options"]}>
-                        <div>Home</div>
-                        <div>About</div>
-                        <div>Where to shop</div>
+                    <div className={styles["options"]}>
+                        <Link href='/'><p>Home</p></Link>
+                        <Link href='/shop'><p>About</p></Link>
+                        <button onClick={onShowShopMenu}>Where to Shop</button>
+                        { showShopMenu && 
+                            <div className={styles["shop-menu"]}>
+                                <p className={styles["greeny-text"]}>Hello</p>
+                            </div> }
                         <hr aria-orientation="vertical"/>
-                        <div>Login</div>
+                        <Link href='/shop'><p>Login</p></Link>
                     </div>
                 </div>
                 <div className={styles["principal-banner-text"]}>

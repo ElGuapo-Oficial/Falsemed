@@ -1,5 +1,4 @@
 import styles from "./CategoriesBanner.module.css";
-import Image from 'next/image';
 
 const CategoriesBanner = () => {
     return (

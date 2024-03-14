@@ -28,6 +28,7 @@
     width: 100%;
     margin: auto;
     text-align: center;
+    font-size: 20px;
   }
   
   .categories-banner-text h1 {
@@ -37,7 +38,6 @@
   }
   
   .categories-banner-text p {
-    font-size: 20px;
     line-height: 35px;
     margin: 6px;
   }
@@ -57,7 +57,7 @@
     cursor: pointer;
   }
 
-  .categories-banner-text .greeny-text {
+  .greeny-text {
     font-weight: 700;
     color: rgb(103, 155, 154);
     font-size: 13px;
@@ -66,14 +66,14 @@
     letter-spacing: 1px;
   }
 
-  .categories-banner-text .boldy-text {
+  .boldy-text {
     font-weight: 700;
     font-size: 26px;
     line-height: 33.6px;
     letter-spacing: -0.39px;
   }
 
-  .categories-banner-text .blacky-text {
+  .blacky-text {
     font-weight: 400;
     font-size: 23px;
     line-height: 28.8px;
@@ -85,7 +85,6 @@
     border: 1px solid gainsboro;
     border-radius: 50px;
     box-shadow: 0 0 12px 2px rgb(190, 246, 246);
-    margin: 15px 0;
   }
 
   .search .inside-search {
