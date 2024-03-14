@@ -1,0 +1,116 @@
+  .principal-banner {
+    height: 750px;
+    width: calc(100% - 20px);
+    max-width: 1670px;
+    background-color: rgb(0, 73, 83);
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    margin: 0 auto;
+  }
+  
+  .principal-banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .principal-banner-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    width: 100%;
+    max-width: 1300px;
+    /* background-color: red; */
+  }
+  
+  .principal-banner-menu img {
+    height: 100%;
+    width: auto;
+  }
+  
+  .principal-banner-menu hr {
+    width: 1px; 
+    height: 20px;
+    display: inline-block;
+    margin: 10px 15px;
+    border: none; 
+    background-color: white;
+  }
+  
+  .menu-options {
+    display: flex;
+    font-size: 19px;
+  }
+  
+  .menu-options div {
+    padding: 8px;
+    margin: 0 10px;
+    border-radius: 5px;
+  }
+  
+  .menu-options div:hover {
+    background-color: rgba(2, 102, 115, 0.5);
+    cursor: pointer;
+  }
+  
+  .principal-banner-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 850px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .principal-banner-text h1 {
+    font-size: 56px;
+    margin: 0;
+    line-height: 70px;
+  }
+  
+  .principal-banner-text p {
+    font-size: 20px;
+    line-height: 35px;
+  }
+  
+  .principal-banner-text button {
+    border: none;
+    background-color: rgb(23, 152, 149);
+    color: white;
+    height: 54px;
+    width: 180px;
+    font-size: 20px;
+    border-radius: 8px;
+  }
+  
+  .principal-banner-text button:hover {
+    background-color: rgb(8, 104, 102);
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+
+    .principal-banner-text {
+      max-width: none;
+    }
+  
+    .principal-banner-text h1 {
+      font-size: 30px;
+      line-height: 45px;
+    }
+    
+    .principal-banner-text p {
+      font-size: 16px;
+      line-height: 25px;
+    }
+  
+    .menu-options{
+      display: none;
+    }
+
+  }

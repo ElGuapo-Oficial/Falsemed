@@ -1,0 +1,104 @@
+  .categories-banner {
+    width: 100%;
+    max-width: 1280px;
+    background-color: white;
+    border: 2px solid gainsboro;
+    padding: 20px;
+    border-radius: 15px;
+    color: black;
+    /* z-index: 1; */
+    margin-top: -60px;
+  }
+  
+  .categories-banner-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%
+  }
+  
+    
+  .categories-banner-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 850px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .categories-banner-text h1 {
+    font-size: 56px;
+    margin: 0;
+    line-height: 70px;
+  }
+  
+  .categories-banner-text p {
+    font-size: 20px;
+    line-height: 35px;
+    margin: 6px;
+  }
+  
+  .categories-banner-text button {
+    border: none;
+    background-color: rgb(23, 152, 149);
+    color: white;
+    height: 54px;
+    width: 180px;
+    font-size: 20px;
+    border-radius: 8px;
+  }
+  
+  .categories-banner-text button:hover {
+    background-color: rgb(8, 104, 102);
+    cursor: pointer;
+  }
+
+  .categories-banner-text .greeny-text {
+    font-weight: 700;
+    color: rgb(103, 155, 154);
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 21px;
+    letter-spacing: 1px;
+  }
+
+  .categories-banner-text .boldy-text {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 33.6px;
+    letter-spacing: -0.39px;
+  }
+
+  .categories-banner-text .blacky-text {
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 28.8px;
+  }
+
+  .search {
+    height: 75px;
+    width: 100%;
+    border: 1px solid gainsboro;
+    border-radius: 50px;
+    box-shadow: 0 0 12px 2px rgb(190, 246, 246);
+    margin: 15px 0;
+  }
+
+  .search .inside-search {
+    width: calc(100% - 85px);
+    text-align: left;
+    margin: 0 auto;
+  }
+
+  .search .inside-search input {
+    width: 100%;
+    border: none;
+    font-size: 24px;
+  }
+  
+  @media (max-width: 768px) {
+  }
