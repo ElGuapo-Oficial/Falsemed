@@ -1,0 +1,49 @@
+.search {
+    height: 85px;
+    width: 665px;
+    border: 1px solid gainsboro;
+    border-radius: 50px;
+    box-shadow: 0 0 2px 0.5px rgb(187, 244, 244);
+    background-color: white;
+}
+
+.search .inside-search {
+    width: calc(100% - 85px);
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+    background-color: inherit;
+}
+
+.search .inside-search input {
+    width: 100%;
+    border: none;
+    font-size: 23px;
+    background-color: inherit;
+    color: black;
+}
+
+.search .inside-search input::placeholder {  
+    color: gray;
+}
+
+.search .inside-search input:focus {
+    outline: none;
+}
+
+.greeny-text {
+    font-weight: 700;
+    color: rgb(103, 155, 154);
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 21px;
+    letter-spacing: 1px;
+}
+ 
+
+@media (max-width: 768px) {
+
+}
