@@ -1,4 +1,4 @@
-import styles from "./CategoriesBanner.module.css";
+import styles from "./categories-banner.module.css";
 
 const CategoriesBanner = () => {
     return (

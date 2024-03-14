@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react';
-import styles from "./PrincipalBanner.module.css";
+import styles from "./principal-banner.module.css";
 import Link from "next/link";
 
 const PrincipalBanner: React.FC = () => {
