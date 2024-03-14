@@ -2,7 +2,7 @@
     height: 750px;
     width: calc(100% - 40px);
     max-width: 1670px;
-    background-color: rgb(0, 73, 83);
+    background-color: rgb(1, 65, 73);
     padding: 20px;
     border-radius: 15px;
     color: white;
@@ -97,7 +97,7 @@
   .principal-banner-text h1 {
     font-size: 54px;
     margin: 0;
-    line-height: 84px;
+    line-height: 83px;
   }
   
   .principal-banner-text p {
