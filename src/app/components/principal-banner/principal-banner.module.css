@@ -97,7 +97,7 @@
   .principal-banner-text h1 {
     font-size: 56px;
     margin: 0;
-    line-height: 75px;
+    line-height: 85px;
   }
   
   .principal-banner-text p {
@@ -113,6 +113,7 @@
     width: 180px;
     font-size: 20px;
     border-radius: 8px;
+    margin-top: 30px;
   }
   
   .principal-banner-text button:hover {
