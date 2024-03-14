@@ -33,7 +33,7 @@ const PrincipalBanner: React.FC = () => {
                     <h1>Exercise is Medicine.</h1>
                     <h1>Supplements are Medicine.</h1>
                     <p>Truemed connects you to an independent licensed provider to assess whether food, exercise, or supplement interventions can prevent or reverse disease. In some cases, this can unlock HSA/FSA spending on these items.</p>
-                    <button>Do I qualify?</button>
+                    <button>Do I Qualify?</button>
                 </div>
             </div>
         </div>
