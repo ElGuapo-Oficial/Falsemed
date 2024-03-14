@@ -18,7 +18,6 @@
     height: 100%
   }
   
-    
   .categories-banner-text {
     display: flex;
     flex-direction: column;
@@ -31,18 +30,18 @@
     font-size: 20px;
   }
   
-  .categories-banner-text h1 {
+  /* .categories-banner-text h1 {
     font-size: 56px;
     margin: 0;
     line-height: 70px;
-  }
+  } */
   
   .categories-banner-text p {
     line-height: 35px;
     margin: 6px;
   }
   
-  .categories-banner-text button {
+  /* .categories-banner-text button {
     border: none;
     background-color: rgb(23, 152, 149);
     color: white;
@@ -50,12 +49,12 @@
     width: 180px;
     font-size: 20px;
     border-radius: 8px;
-  }
+  } */
   
-  .categories-banner-text button:hover {
+  /* .categories-banner-text button:hover {
     background-color: rgb(8, 104, 102);
     cursor: pointer;
-  }
+  } */
 
   .greeny-text {
     font-weight: 700;
@@ -81,7 +80,7 @@
 
   .search {
     height: 75px;
-    width: 100%;
+    width: calc(100% - 100px);
     border: 1px solid gainsboro;
     border-radius: 50px;
     box-shadow: 0 0 12px 2px rgb(190, 246, 246);
