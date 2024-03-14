@@ -1,12 +1,11 @@
 import styles from "./PrincipalBanner.module.css";
-import Image from 'next/image';
 
 const PrincipalBanner = () => {
     return (
         <div className={styles["principal-banner"]}>
             <div className={styles["principal-banner-content"]}>
                 <div className={styles["principal-banner-menu"]}>
-                    <Image src="Truemed_Logo_Full_White.png" alt="Truemed logo"/>
+                    <img src="Truemed_Logo_Full_White.png" alt="Truemed logo"/>
                     <div className={styles["menu-options"]}>
                         <div>Home</div>
                         <div>About</div>
