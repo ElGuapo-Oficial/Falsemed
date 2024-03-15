@@ -47,7 +47,7 @@ const Menu = () => {
 
     return (
         <div className={styles.menu}>
-            <img src="/Truemed_Logo_Full_White.png" alt="Truemed logo"/>
+            <Link href='/'><img src="/Truemed_Logo_Full_White.png" alt="Truemed logo"/></Link>
             <div className={styles["options"]}>
                 <Link href='/'><p className={isActive('/') ? styles.active : ''}>Home</p></Link>
                 <Link href='/shop/fitness'><p className={isActive('/shop/fitness') ? styles.active : ''}>About</p></Link>

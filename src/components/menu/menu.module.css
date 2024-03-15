@@ -24,6 +24,8 @@
 
 .menu a {
     text-decoration: none;
+    height: 100%;
+    width: auto;
 }
 
 .menu a:visited {
@@ -38,7 +40,6 @@
 
 .menu a p:hover, .menu button:hover {
     background-color: rgba(2, 102, 115, 0.5);
-    cursor: pointer;
 }
 
 .menu .active {
@@ -46,7 +47,7 @@
     font-weight: 500;
 }
 
-.menu img {
+.menu a img {
     height: 100%;
     width: auto;
 }
@@ -86,7 +87,6 @@
 
 .menu .shop-menu .options a p:hover {
     background-color: rgba(179, 226, 232, 0.5);
-    cursor: pointer;
 }
 
 .greeny-text {
