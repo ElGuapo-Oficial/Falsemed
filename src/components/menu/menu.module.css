@@ -22,16 +22,6 @@
     color: white;
 }
 
-.menu .shop-menu {
-    position: absolute;
-    top: 50px;
-    left: 190px;
-    height: 100px;
-    width: 255px;
-    background-color: white;
-    border-radius: 5px;
-}
-
 .menu a {
     text-decoration: none;
 }
@@ -51,6 +41,11 @@
     cursor: pointer;
 }
 
+.menu .active {
+    color: rgb(238, 230, 148);
+    font-weight: 500;
+}
+
 .menu img {
     height: 100%;
     width: auto;
@@ -63,6 +58,41 @@
     margin: 10px 15px;
     border: none; 
     background-color: white;
+}
+
+.menu .shop-menu {
+    position: absolute;
+    top: 50px;
+    left: 190px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px 10px;
+    z-index: 10;
+}
+
+.menu .shop-menu .options {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu .shop-menu .options a p {
+    color: black;
+    font-size: 17px;
+}
+
+.menu .shop-menu .options a p:hover {
+    background-color: rgba(179, 226, 232, 0.5);
+    cursor: pointer;
+}
+
+.greeny-text {
+    font-weight: 700;
+    color: rgb(103, 155, 154);
+    font-size: 11px;
+    text-transform: uppercase;
+    line-height: 21px;
+    letter-spacing: 1px;
+    margin-left: 5px;
 }
 
 @media (max-width: 768px) {
