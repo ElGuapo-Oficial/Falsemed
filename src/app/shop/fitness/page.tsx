@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react';
+import Search from '@/components/search/search';
 import { useImageContext } from "@/contexts/ImageContext";
 
 export default function Page() {
@@ -11,6 +12,9 @@ export default function Page() {
     }, [])
 
     return (
-        <div>Fitness Page</div>
+        <>
+            <h1>Fitness Page</h1>
+            <Search />
+        </>
     );
 }

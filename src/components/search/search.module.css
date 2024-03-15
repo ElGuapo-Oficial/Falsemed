@@ -1,6 +1,7 @@
 .search {
     height: 85px;
-    width: 665px;
+    max-width: 665px;
+    width: 100%;
     border: 1px solid gainsboro;
     border-radius: 50px;
     box-shadow: 0 0 2px 0.5px rgb(187, 244, 244);
