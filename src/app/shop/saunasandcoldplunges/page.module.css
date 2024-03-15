@@ -1,12 +1,7 @@
-.saunas {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+.sauna {
+    padding: 10px 20px;
 }
 
-.saunas h1 {
-    font-size: 60px;
+.sauna h1 {
+    margin-bottom: 20px;
 }

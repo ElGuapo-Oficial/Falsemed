@@ -1,21 +1,15 @@
-'use client'
-
-import { useEffect } from 'react';
-import Search from '@/components/search/search';
-import { useImageContext } from "@/contexts/ImageContext";
 import styles from './page.module.css';
+import { getFoodData } from '@/data/category-data';
+import { MedData } from '@/types/allTypes';
+import CategoryGrid from '@/components/category-grid/category-grid';
 
-export default function Page() {
-    const { setImageUrl } = useImageContext();
-
-    useEffect(() => {
-        setImageUrl('https://prod-public-truemed.s3.amazonaws.com/mlp/c/banners/food/852ae113-4318-49bb-9127-5489239ae20a.webp')
-    }, [])
+export default async function Page() {
+    const foodData: MedData = await getFoodData();
 
     return (
         <div className={styles.food}>
-            <h1>Healthy Food</h1>
-            <Search />
+            <h1>Featured Brands</h1>
+            <CategoryGrid categoryData={foodData} />
         </div>
     );
 }

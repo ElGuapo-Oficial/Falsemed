@@ -37,9 +37,9 @@ const ShopMenu = () => {
 
 const Menu = () => {
     const [showShopMenu, setShoShopMenu] =  useState<boolean>(false);
-    const pathname = usePathname();
+    const pathName = usePathname();
 
-    const isActive = (path: string): boolean => path === pathname;
+    const isActive = (path: string): boolean => path === pathName;
 
     const onShowShopMenu = () => {
         setShoShopMenu(showShopMenu => !showShopMenu)

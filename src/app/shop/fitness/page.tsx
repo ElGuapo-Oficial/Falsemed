@@ -1,21 +1,15 @@
-'use client'
-
-import { useEffect } from 'react';
-import Search from '@/components/search/search';
-import { useImageContext } from "@/contexts/ImageContext";
 import styles from './page.module.css';
+import { getFitnessData } from '@/data/category-data';
+import { MedData } from '@/types/allTypes';
+import CategoryGrid from '@/components/category-grid/category-grid';
 
-export default function Page() {
-    const { setImageUrl } = useImageContext();
-
-    useEffect(() => {
-        setImageUrl('https://prod-public-truemed.s3.amazonaws.com/mlp/c/banners/fitness/8a488169-3d4f-4d29-aa70-75e777b77e1e.webp')
-    }, [])
+export default async function Page() {
+    const fitnessData: MedData = await getFitnessData();
 
     return (
         <div className={styles.fitness}>
-            <h1>Fitness</h1>
-            <Search />
+            <h1>Featured Brands</h1>
+            <CategoryGrid categoryData={fitnessData} />
         </div>
     );
 }
