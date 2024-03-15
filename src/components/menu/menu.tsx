@@ -51,7 +51,7 @@ const Menu = () => {
             <div className={styles["options"]}>
                 <Link href='/'><p className={isActive('/') ? styles.active : ''}>Home</p></Link>
                 <Link href='/shop/fitness'><p className={isActive('/shop/fitness') ? styles.active : ''}>About</p></Link>
-                <button onClick={onShowShopMenu}>Where to Shop</button>
+                <button className={showShopMenu ? styles['show-shop-menu'] : ''} onClick={onShowShopMenu}>Where to Shop</button>
                 {showShopMenu && <ShopMenu />}
                 <hr aria-orientation="vertical"/>
                 <Link href='/login'><p className={isActive('/login') ? styles.active : ''}>Login</p></Link>

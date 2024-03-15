@@ -60,6 +60,10 @@
     background-color: white;
 }
 
+.menu button.show-shop-menu {
+    background-color: rgba(2, 102, 115, 0.5);
+}
+
 .menu .shop-menu {
     position: absolute;
     top: 50px;
