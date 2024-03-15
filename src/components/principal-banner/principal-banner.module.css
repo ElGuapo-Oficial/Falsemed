@@ -6,7 +6,10 @@
     padding: 20px;
     border-radius: 15px;
     color: white;
-    margin: 10px auto 0;
+    margin: 10px auto;
+
+    background-size: cover;   /* Ensure the image covers the entire element */
+    background-position: center; /* Center the background image */
   }
   
   .principal-banner-content {
@@ -16,74 +19,36 @@
     height: 100%;
   }
 
-  .menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 34px;
-    width: 100%;
-    max-width: 1300px;
-  }
-
-  .menu .options {
+  .principal-banner-children {
     position: relative;
     display: flex;
-    font-size: 19px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 890px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
   }
 
-  .menu button {
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    font-size: 19px;
-    color: white;
-  }
-
-  .menu .shop-menu {
+  /*
+    TODO: Investigate and remove the need for this workaround. 
+    Temporary hack since there's an unexpected div affecting layout.
+  */
+  .principal-banner-children > div {
     position: absolute;
-    top: 50px;
-    left: 190px;
-    height: 100px;
-    width: 255px;
-    background-color: white;
-    border-radius: 5px;
-  }
-
-  .menu a {
-    text-decoration: none;
-  }
-
-  .menu a:visited {
-    color: white
-  }
-
-  .menu a p, .menu button {
-    padding: 8px;
-    margin: 0 10px;
-    border-radius: 5px;
-  }
-
-  .menu a p:hover, .menu button:hover {
-    background-color: rgba(2, 102, 115, 0.5);
-    cursor: pointer;
-  }
-  
-  .menu img {
+    top: -250px;
+    width: 100%;
     height: 100%;
-    width: auto;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: red; */
   }
-  
-  .menu hr {
-    width: 1px; 
-    height: 20px;
-    display: inline-block;
-    margin: 10px 15px;
-    border: none; 
-    background-color: white;
-  }
-  
-  .principal-banner-text {
+
+  .principal-banner-children {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,20 +59,20 @@
     text-align: center;
   }
   
-  .principal-banner-text h1 {
+  .principal-banner-children h1 {
     font-size: 54px;
     margin: 0;
     line-height: 83px;
   }
   
-  .principal-banner-text p {
+  .principal-banner-children p {
     font-size: 22px;
     line-height: 35px;
     text-align: justify;
     text-align-last: center;
   }
   
-  .principal-banner-text button {
+  .principal-banner-children button {
     border: none;
     background-color: rgb(23, 152, 149);
     color: white;
@@ -118,37 +83,23 @@
     margin-top: 35px;
   }
   
-  .principal-banner-text button:hover {
+  .principal-banner-children button:hover {
     background-color: rgb(8, 104, 102);
     cursor: pointer;
   }
-
-  .greeny-text {
-    font-weight: 700;
-    color: rgb(103, 155, 154);
-    font-size: 13px;
-    text-transform: uppercase;
-    line-height: 21px;
-    letter-spacing: 1px;
-  }
   
   @media (max-width: 768px) {
-
-    .principal-banner-text {
+    .principal-banner-children {
       max-width: none;
     }
   
-    .principal-banner-text h1 {
+    .principal-banner-children h1 {
       font-size: 30px;
       line-height: 45px;
     }
     
-    .principal-banner-text p {
+    .principal-banner-children p {
       font-size: 16px;
       line-height: 25px;
-    }
-  
-    .menu-options{
-      display: none;
     }
   }

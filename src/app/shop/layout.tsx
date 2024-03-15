@@ -1,5 +1,5 @@
 import styles from "../page.module.css";
-import PrincipalBanner from "../../components/principal-banner2/principal-banner";
+import PrincipalBanner from "../../components/principal-banner/principal-banner";
 import CategoryBanner from "../../components/category-banner/category-banner";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
