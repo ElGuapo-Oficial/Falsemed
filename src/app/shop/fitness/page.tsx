@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import Search from '@/components/search/search';
 import { useImageContext } from "@/contexts/ImageContext";
+import styles from './page.module.css';
 
 export default function Page() {
     const { setImageUrl } = useImageContext();
@@ -12,9 +13,9 @@ export default function Page() {
     }, [])
 
     return (
-        <>
-            <h1>Fitness Page</h1>
+        <div className={styles.fitness}>
+            <h1>Fitness</h1>
             <Search />
-        </>
+        </div>
     );
 }

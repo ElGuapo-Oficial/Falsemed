@@ -1,7 +1,9 @@
 'use client'
 
 import { useEffect } from 'react';
+import Search from '@/components/search/search';
 import { useImageContext } from "@/contexts/ImageContext";
+import styles from './page.module.css';
 
 export default function Page() {
     const { setImageUrl } = useImageContext();
@@ -11,6 +13,9 @@ export default function Page() {
     }, [])
 
     return (
-        <div>Suplements Page</div>
+        <div className={styles.supplements}>
+            <h1>Supplements</h1>
+            <Search />
+        </div>
     );
 }
