@@ -3,16 +3,16 @@
 import { useContext } from 'react';
 import StateContext from '@/contexts/StateContext';
 import styles from './cart-item.module.css';
-import { CartItem } from '@/types/allTypes';
+import { CartItem as CartItemType } from '@/types/allTypes';
 
 interface CartItemProps {
-    cartItem: CartItem; 
+    cartItem: CartItemType; 
 }
  
 const CartItem: React.FC<CartItemProps> = ({ cartItem }) => {
     const { dispatch } = useContext(StateContext);
     
-    const onDeleteItem = (cartItem: CartItem) => {
+    const onDeleteItem = (cartItem: CartItemType) => {
         dispatch({ type: 'removeFromCart', payload: { cartItemId: cartItem.id } });
     }
  
