@@ -1,0 +1,55 @@
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid gainsboro;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+ 
+.image {
+    width: 100%;
+    max-width: 150px; 
+    height: 150px;
+    object-fit: cover;
+    background-color: gainsboro;
+    border-radius: 5px;;
+}
+
+.content {
+    width: 50%;
+    height: 100%;
+    margin: 10px;
+    /* border: 1px solid gainsboro; */
+    text-align:left
+}
+
+.content button {
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    border-radius: 15px;
+    margin-top: 15px;
+    padding: 8px;
+}
+
+.content button:active {
+    transform: translateY(0.5px);
+}
+  
+.content button:hover {
+    background-color: rgb(163, 8, 8);
+    cursor: pointer;
+}
+
+.total-price {
+    text-align: center;
+}
+
+@media (max-width: 810px) {
+    .item {
+        flex-wrap: wrap;
+    }
+}

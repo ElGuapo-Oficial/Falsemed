@@ -7,7 +7,7 @@ export default async function Page() {
     const supplementsData: MedData = await getSuplementsData();
 
     return (
-        <div className={styles.suppments}>
+        <div className={styles.supplements}>
             <h1>Featured Brands</h1>
             <CategoryGrid categoryData={supplementsData} />
         </div>

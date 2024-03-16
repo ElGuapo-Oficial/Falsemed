@@ -1,0 +1,30 @@
+.cart {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cart .cart-items-section {
+    flex-grow: 1;
+}
+
+.cart .payments-section {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.cart .empty-cart {
+    text-align: center;
+    flex-grow: 1;
+}
+
+@media (max-width: 500px) {
+    .cart {
+        flex-wrap: wrap;
+    } 
+    .cart .payments-section {
+        order: -1;
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,55 @@
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 320px;
+    height: 100%;
+    max-height: 500px;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    background-color: rgb(225, 246, 245);
+    padding: 10px 15px;
+}
+
+.payment-form .card-field {
+    margin: 5px 0;
+}
+
+.payment-form .card-field input {
+    width: 100%;
+    background-color: white;
+    border: 1px solid gainsboro;
+    font-size: 16px;
+    color: rgb(69, 68, 68);
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.payment-form .card-field input[type="number"]::-webkit-inner-spin-button,
+.payment-form .card-field input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.payment-form .card-field input::placeholder {
+    color: gainsboro;
+}
+
+.payment-form button {
+    border: none;
+    background-color: rgb(23, 152, 149);
+    color: white;
+    font-size: 17px;
+    border-radius: 15px;
+    margin-top: 15px;
+    padding: 10px;
+}
+  
+.payment-form button:hover {
+    background-color: rgb(8, 104, 102);
+    cursor: pointer;
+}
+
+.payment-form button:active {
+    transform: translateY(0.5px);
+}

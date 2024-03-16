@@ -31,3 +31,10 @@ export interface Category {
     name: string;
     slug: string;
 }
+
+export interface CartItem {
+    id: string;
+    item: Featured;
+    price: number;
+    quantity: number;
+}

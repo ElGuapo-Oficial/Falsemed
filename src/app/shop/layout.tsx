@@ -3,9 +3,9 @@
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import styles from "../page.module.css";
+import { StateProvider } from '@/contexts/StateContext';
 import PrincipalBanner from "../../components/principal-banner/principal-banner";
 import CategoryBanner from "../../components/category-banner/category-banner";
-import CategoryGrid from '@/components/category-grid/category-grid';
 import Search from "@/components/search/search";
 
 interface BannerContent {
@@ -31,7 +31,11 @@ const contentMap: { [key: string]: BannerContent }  = {
   '/shop/saunasandcoldplunges': {
       title: 'Saunas & Cold Plunges', 
       backgroundImage: 'https://prod-public-truemed.s3.amazonaws.com/mlp/c/banners/saunasandcoldplunge/764c9d77-3327-4118-9868-fc4cb125eacf.webp'
-  }
+  },
+  '/shop/cart': {
+    title: 'Cart', 
+    backgroundImage: '/image.webp'
+}
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -43,17 +47,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   }, [pathName, contentMap]);
 
   return (
-    <main className={styles.main}>
-        <PrincipalBanner backgroundImage={content.backgroundImage}>
-            <div className={styles["principal-banner-content"]}>
-                <h1>{content.title}</h1>
-                <Search />
-            </div>
-        </PrincipalBanner>
-        <CategoryBanner>
-            { children }
-        </CategoryBanner>
-    </main>
+    <StateProvider>
+        <main className={styles.main}>
+            <PrincipalBanner backgroundImage={content.backgroundImage}>
+                <div className={styles["principal-banner-content"]}>
+                    <h1>{content.title}</h1>
+                    <Search />
+                </div>
+            </PrincipalBanner>
+            <CategoryBanner>
+                { children }
+            </CategoryBanner>
+        </main>
+    </StateProvider>
   );
 }
 

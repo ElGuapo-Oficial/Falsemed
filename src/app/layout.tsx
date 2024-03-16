@@ -16,7 +16,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="global-wrap">
+          {children}
+          <footer className="footer">Footer</footer>
+        </div>
+        {/* <div style={{width: "100%", color: "white", backgroundColor: 'black', textAlign: 'center', height: "100px", lineHeight: "100px"}}>Footer</div> */}
+      </body>
     </html>
   );
 }
