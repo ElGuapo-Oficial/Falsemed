@@ -8,8 +8,8 @@
     color: white;
     margin: 10px auto;
 
-    background-size: cover;   /* Ensure the image covers the entire element */
-    background-position: center; /* Center the background image */
+    background-size: cover;
+    background-position: center;
   }
   
   .principal-banner-content {
@@ -43,7 +43,6 @@
     align-items: center;
     justify-content: space-around;
     margin-top: -150px;
-    /* background-color: red; */
   }
 
   .principal-banner-children {

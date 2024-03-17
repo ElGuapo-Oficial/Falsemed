@@ -17,7 +17,6 @@ const CartItem: React.FC<CartItemProps> = ({ cartItem }) => {
     }
  
     return (
-
         <div key={cartItem.id} className={styles.item}>
              <img src={cartItem.item.image_banner_url} className={styles.image} alt={cartItem.item.name}/>
              <div className={styles.content}>

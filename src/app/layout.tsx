@@ -21,7 +21,6 @@ export default function RootLayout({
           {children}
           <footer className="footer">Footer</footer>
         </div>
-        {/* <div style={{width: "100%", color: "white", backgroundColor: 'black', textAlign: 'center', height: "100px", lineHeight: "100px"}}>Footer</div> */}
       </body>
     </html>
   );

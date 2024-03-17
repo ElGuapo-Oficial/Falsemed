@@ -1,6 +1,6 @@
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust minmax for your desired size */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust minmax for desired size */
     gap: 20px;
     justify-content: center;
 }

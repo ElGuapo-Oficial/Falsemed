@@ -88,7 +88,7 @@ body {
 .global-wrap {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Use viewport height to ensure the container fills the screen */
+  min-height: 100vh;
 }
 
 .footer {
