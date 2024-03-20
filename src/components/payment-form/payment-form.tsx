@@ -1,6 +1,18 @@
 'use client'
+import { useFormStatus } from 'react-dom';
+import { useFormState } from 'react-dom';
 import { onSubmitPaymemtAction } from '@/actions/payment-action';
 import styles from './payment-form.module.css';
+
+function SubmitButton() {
+    const { pending } = useFormStatus()
+
+    return (
+        <button type='submit' aria-disabled={pending}>
+            Add
+        </button>
+    )
+}
 
 function PaymentForm() {
 
@@ -26,7 +38,7 @@ function PaymentForm() {
                 <div><input type='number' id='' name=''/></div>
             </div>
  
-            <button>Submit</button>
+            <SubmitButton />
         </form>
     )
 }

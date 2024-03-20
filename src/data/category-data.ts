@@ -1,3 +1,5 @@
+'use server'
+
 export async function getFitnessData() {
     const res = await fetch('https://www.truemed.com/_next/data/_Lghb3s1r-4rD8RYWfUwV/shop/fitness.json?category=fitness')
    
