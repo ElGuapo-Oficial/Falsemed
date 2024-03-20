@@ -1,7 +1,7 @@
 'use server'
 
 export async function getFitnessData() {
-    const res = await fetch('https://www.truemed.com/_next/data/_Lghb3s1r-4rD8RYWfUwV/shop/fitness.json?category=fitness')
+    const res = await fetch('https://www.truemed.com/_next/data/GW7TiC95Drixb8wTpUcVo/shop/fitness.json?category=fitness')
    
     if (!res.ok) {
       throw new Error('Failed to fetch Fitness data');
@@ -11,7 +11,7 @@ export async function getFitnessData() {
 }
 
 export async function getSuplementsData() {
-    const res = await fetch('https://www.truemed.com/_next/data/_Lghb3s1r-4rD8RYWfUwV/shop/supplements.json?category=supplements')
+    const res = await fetch('https://www.truemed.com/_next/data/GW7TiC95Drixb8wTpUcVo/shop/supplements.json?category=supplements')
    
     if (!res.ok) {
       throw new Error('Failed to fetch Supplements data');
@@ -21,7 +21,7 @@ export async function getSuplementsData() {
 }
 
 export async function getFoodData() {
-    const res = await fetch('https://www.truemed.com/_next/data/_Lghb3s1r-4rD8RYWfUwV/shop/food.json?category=food')
+    const res = await fetch('https://www.truemed.com/_next/data/GW7TiC95Drixb8wTpUcVo/shop/food.json?category=food')
    
     if (!res.ok) {
       throw new Error('Failed to fetch Food data');
@@ -31,7 +31,7 @@ export async function getFoodData() {
 }
 
 export async function getSaunaData() {
-    const res = await fetch('https://www.truemed.com/_next/data/_Lghb3s1r-4rD8RYWfUwV/shop/saunasandcoldplunges.json?category=saunasandcoldplunges')
+    const res = await fetch('https://www.truemed.com/_next/data/GW7TiC95Drixb8wTpUcVo/shop/saunasandcoldplunges.json?category=saunasandcoldplunges')
    
     if (!res.ok) {
       throw new Error('Failed to fetch Sauna data');
