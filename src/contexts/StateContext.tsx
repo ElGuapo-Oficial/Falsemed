@@ -1,3 +1,5 @@
+'use client'
+
 import React, { createContext, useReducer, Dispatch } from 'react';
 import { CartItem } from '../types/allTypes';
 

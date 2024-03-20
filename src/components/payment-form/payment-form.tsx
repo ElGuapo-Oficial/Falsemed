@@ -1,14 +1,11 @@
+'use client'
+import { onSubmitPaymemtAction } from '@/actions/payment-action';
 import styles from './payment-form.module.css';
 
-
-const PaymentForm = () => {
-
-    const onSubmitPaymemt = (formData: FormData) => {
-
-    }
+function PaymentForm() {
 
     return (
-        <form className={styles["payment-form"]}>
+        <form className={styles["payment-form"]} action={onSubmitPaymemtAction}>
             <div className={styles["card-field"]}>
                 <div><label htmlFor=''>Credit Number</label></div>
                 <div><input type="number" id='' name='' inputMode="numeric" /></div>

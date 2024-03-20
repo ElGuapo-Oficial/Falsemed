@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { StateProvider } from "@/contexts/StateContext";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,7 +19,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="global-wrap">
-          {children}
+          <StateProvider>
+            {children}
+          </StateProvider>
           <footer className="footer">Footer</footer>
         </div>
       </body>

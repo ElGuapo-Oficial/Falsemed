@@ -63,7 +63,7 @@ const Menu = () => {
                 <button className={` ${showShopMenu ? styles['show-shop-menu'] : ''} ${isActive('/shop/fitness') ? styles.active : ''}`} onClick={onShowShopMenu}>Where to Shop</button>
                 { showShopMenu && <ShopMenu onMenuClick={() => setShoShopMenu(false)}/>}
                 <hr aria-orientation="vertical"/>
-                <Link href='/shop/cart'><p className={isActive('/shop/cart') ? styles.active : ''}><Cart /></p></Link>
+                <Link href='/cart'><p className={isActive('/cart') ? styles.active : ''}><Cart /></p></Link>
             </div>
         </div>
     )
