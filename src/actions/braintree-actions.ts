@@ -45,9 +45,9 @@ export const processSaleTransaction = async (paymentMethodNonce: string, amount:
         }
     } catch (err) {
         if (err instanceof Error) {
-            throw new Error(err.message);
+            throw new Error(`Error on Braintree ActionsprocessSaleTransaction: ${err.message}`);
         } else {
-            throw new Error('An unknown error occurred during the transaction.');
+            throw new Error('Error on Braintree ActionsprocessSaleTransaction: An unknown error occurred during the transaction.');
         }
     }
   };

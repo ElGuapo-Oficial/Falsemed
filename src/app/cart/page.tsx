@@ -15,6 +15,7 @@ const Page = () => {
     }, [state]);
 
     const handleResetCart = () => {
+        console.log("Reseting Cart!!");
         dispatch({ type: 'resetCart' });
     };
 
