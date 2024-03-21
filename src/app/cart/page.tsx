@@ -1,14 +1,18 @@
 'use client'
 
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import StateContext from '@/contexts/StateContext';
 import CartItem from '@/components/cart-item/cart-item';
-import PaymentForm from '@/components/payment-form/payment-form';
+import BrainTreeForm from '@/components/braintree/braintree-form';
 import styles from './page.module.css';
 
 const Page = () => {
     const { state } = useContext(StateContext);
-    console.log("Cart state: ", state);
+    const [totalPurchase, setTotalPurchase] = useState<number>(0);
+
+    useEffect(() => {
+        setTotalPurchase(state.cartItems.reduce((total, item) => total + (item.price * item.quantity), 0))
+    }, [state]);
 
     return (
         <div className={styles.cart}>
@@ -20,7 +24,8 @@ const Page = () => {
                             )}
                         </div>
                         <div className={styles["payments-section"]}>
-                            <PaymentForm />
+                            <div className={styles["total-section"]}>Order Total: ${totalPurchase}</div>
+                            <BrainTreeForm />
                         </div>
                     </>
                 :   <div className={styles["empty-cart"]}>Empty cart</div>

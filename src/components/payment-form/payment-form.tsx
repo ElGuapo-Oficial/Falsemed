@@ -1,7 +1,6 @@
 'use client'
-import { useFormStatus } from 'react-dom';
-import { useFormState } from 'react-dom';
-import { onSubmitPaymemtAction } from '@/actions/payment-action';
+import { useFormStatus, useFormState } from 'react-dom';
+import { onSubmitPaymemtAction } from '@/actions/payment-actions';
 import styles from './payment-form.module.css';
 
 function SubmitButton() {
@@ -15,27 +14,28 @@ function SubmitButton() {
 }
 
 function PaymentForm() {
+    const [state, dispatch] = useFormState(onSubmitPaymemtAction, undefined);
 
-    return (
-        <form className={styles["payment-form"]} action={onSubmitPaymemtAction}>
+     return (
+        <form className={styles["payment-form"]} action={dispatch}>
             <div className={styles["card-field"]}>
                 <div><label htmlFor=''>Credit Number</label></div>
-                <div><input type="number" id='' name='' inputMode="numeric" /></div>
+                <div><input type="number" id='creditNumber' name='creditNumber' inputMode="numeric" /></div>
             </div>
 
             <div className={styles["card-field"]}>
                 <div><label htmlFor=''>Name on Card</label></div>
-                <div><input type='text' id='' name='' placeholder='Ex. John Website '/></div>
+                <div><input type='text' id='nameOnCard' name='nameOnCard' placeholder='Ex. John Website '/></div>
             </div>
 
             <div className={styles["card-field"]}>
                 <div><label htmlFor=''>Expiry Date</label></div>
-                <div><input type="month" id='' name='' min="2024-01" value="2024-01" onChange={() => null}/></div>
+                <div><input type="month" id='expiryDate' name='expiryDate' min="2024-01" value="2024-01" onChange={() => null}/></div>
             </div>
 
             <div className={styles["card-field"]}>
                 <div><label htmlFor=''>Security Code</label></div>
-                <div><input type='number' id='' name=''/></div>
+                <div><input type='number' id='cvv' name='cvv'/></div>
             </div>
  
             <SubmitButton />

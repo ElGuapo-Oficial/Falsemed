@@ -12,11 +12,20 @@
 .cart .payments-section {
     margin-bottom: 10px;
     margin-left: 10px;
+    max-width: 300px;
+    /* background-color: red; */
 }
 
 .cart .empty-cart {
     text-align: center;
     flex-grow: 1;
+}
+
+.total-section {
+    border: 1px solid rgb(188, 185, 185);
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
 }
 
 @media (max-width: 500px) {
