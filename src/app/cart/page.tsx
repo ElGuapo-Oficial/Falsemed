@@ -7,12 +7,16 @@ import BrainTreeForm from '@/components/braintree/braintree-form';
 import styles from './page.module.css';
 
 const Page = () => {
-    const { state } = useContext(StateContext);
+    const { state, dispatch } = useContext(StateContext);
     const [totalPurchase, setTotalPurchase] = useState<number>(0);
 
     useEffect(() => {
         setTotalPurchase(state.cartItems.reduce((total, item) => total + (item.price * item.quantity), 0))
     }, [state]);
+
+    const handleResetCart = () => {
+        dispatch({ type: 'resetCart' });
+    };
 
     return (
         <div className={styles.cart}>
@@ -25,7 +29,7 @@ const Page = () => {
                         </div>
                         <div className={styles["payments-section"]}>
                             <div className={styles["total-section"]}>Order Total: ${totalPurchase}</div>
-                            <BrainTreeForm total={String(totalPurchase)}/>
+                            <BrainTreeForm total={String(totalPurchase)} callback={handleResetCart}/>
                         </div>
                     </>
                 :   <div className={styles["empty-cart"]}>Empty cart</div>

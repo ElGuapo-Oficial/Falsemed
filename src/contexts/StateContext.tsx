@@ -9,7 +9,8 @@ type State = {
 
 type Action = 
     | { type: 'addToCart'; payload: { cartItem: CartItem } }
-    | { type: 'removeFromCart'; payload: { cartItemId: string; } };
+    | { type: 'removeFromCart'; payload: { cartItemId: string; } }
+    | { type: 'resetCart'};
 
 const StateContext = createContext<{
     state: State;
@@ -47,6 +48,11 @@ const reducer = (state: State, action: Action): State => {
             return {
                 ...state,
                 cartItems: state.cartItems.filter(p => p.id !== action.payload.cartItemId)
+            };
+        case 'resetCart': // Handle the resetCart action
+            return {
+                ...state,
+                cartItems: []
             };
         default:
             return state;

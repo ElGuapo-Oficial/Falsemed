@@ -13,9 +13,10 @@ interface SubmitButtonProps {
 
 type BrainTreeFormProps = {
     total: string;
+    callback: () => void
   };
 
-const BrainTreeForm: React.FC<BrainTreeFormProps> = ({ total }) => {
+const BrainTreeForm: React.FC<BrainTreeFormProps> = ({ total, callback }) => {
     const [clientToken, setClientToken] = useState<string | null>(null);
     const [braintreeInstance, setBraintreeInstance] = useState<any>(null);
 
@@ -47,6 +48,7 @@ const BrainTreeForm: React.FC<BrainTreeFormProps> = ({ total }) => {
         const { nonce } = await braintreeInstance.requestPaymentMethod();
         await processSaleTransaction(nonce, total);
         braintreeInstance.teardown();
+        callback()
     };
 
     return (
