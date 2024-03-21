@@ -25,7 +25,7 @@ const Page = () => {
                         </div>
                         <div className={styles["payments-section"]}>
                             <div className={styles["total-section"]}>Order Total: ${totalPurchase}</div>
-                            <BrainTreeForm />
+                            <BrainTreeForm total={String(totalPurchase)}/>
                         </div>
                     </>
                 :   <div className={styles["empty-cart"]}>Empty cart</div>
