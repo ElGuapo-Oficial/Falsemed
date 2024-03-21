@@ -28,7 +28,7 @@ export const generateClientToken = async (): Promise<string> => {
     }
 };
 
-export const processSaleTransaction = async (paymentMethodNonce: string, amount: string): Promise<braintree.Transaction> => {
+export const processSaleTransaction = async (paymentMethodNonce: string, amount: string): Promise<braintree.Transaction | string> => {
     try {
         const saleResult = await gateway.transaction.sale({
             amount: amount,
@@ -39,7 +39,8 @@ export const processSaleTransaction = async (paymentMethodNonce: string, amount:
         });
   
         if (saleResult.success) {
-            return saleResult.transaction;
+            console.log("sale Result1: ", saleResult.transaction);
+            return "Success!";
         } else {
             throw new Error(saleResult.message);
         }

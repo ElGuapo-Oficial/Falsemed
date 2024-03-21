@@ -47,10 +47,9 @@ const BrainTreeForm: React.FC<BrainTreeFormProps> = ({ total, callback }) => {
         try {
             if (!braintreeInstance) return;
             const { nonce } = await braintreeInstance.requestPaymentMethod();
-            await processSaleTransaction(nonce, total);
-            braintreeInstance.teardown();
+            const saleResult = await processSaleTransaction(nonce, total);
+            console.log("saleResult2", saleResult);
             callback();
-            
         } catch (error) {
             throw new Error(`Error on BrainTreeForm paymentHandler ${error}`);
         }
